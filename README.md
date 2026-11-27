@@ -7,7 +7,7 @@
 <p align="center">
   <a href="https://github.com/ishandutta2007/Awesome-Awesome-Awesome"><img src="https://img.shields.io/badge/Awesome-%E2%9C%94-blueviolet?style=flat-square&logo=github" alt="Awesome"/></a>
   <a href="https://discord.gg/jc4xtF58Ve"><img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord" /></a>
-  <a href="https://github.com/ishandutta2007/Awesome-Generative-3D-Modeling-AI-Asset-Pipelines/stargazers"><img src="https://img.shields.io/github/stars/ishandutta2007/Awesome-Generative-3D-Modeling-AI-Asset-Pipelines?style=social" alt="GitHub stars" /></a>
+  <a href="https://github.com/ishandutta2007/Awesome-Generative-3D-Modeling-AI-Asset-Pipelines/stargazers"><img src="https://img.shields.io/github/stars/ishandutta2007/Awesome-Generative-3D-Modeling-AI-Asset-Pipelines?style=social" alt="GitHub_Stars" /></a>
   <a href="https://github.com/ishandutta2007/Awesome-Generative-3D-Modeling-AI-Asset-Pipelines/network/members"><img src="https://img.shields.io/github/forks/ishandutta2007/Awesome-Generative-3D-Modeling-AI-Asset-Pipelines?style=social" alt="GitHub forks" /></a>
   <a href="https://github.com/ishandutta2007"><img alt="GitHub followers" src="https://img.shields.io/github/followers/ishandutta2007?label=Follow" /></a>
 </p>
@@ -61,9 +61,9 @@ The global generative 3D modeling and AI asset creation market is valued at appr
 
 ## 💻 Open-Source GitHub Projects
 
-*Sorted descending by GitHub repository star counts. Star badges link directly to each repository's stargazers page.*
+*Sorted descending by GitHub repository Stars_Counts. Stars_Badges link directly to each repository's stargazers page.*
 
-| Project | Stars | License / Hosting | Free Tier / Self-Hosted Limit | Description |
+| Project | GitHub_Stars | License / Hosting | Free Tier / Self-Hosted Limit | Description |
 | :--- | :---: | :--- | :--- | :--- |
 | **[3D Gaussian Splatting](https://github.com/graphdeco-inria/gaussian-splatting)** <a href="https://github.com/graphdeco-inria/gaussian-splatting/stargazers"><img src="https://img.shields.io/github/stars/graphdeco-inria/gaussian-splatting?style=social&color=white" alt="Stars"/></a> 🌟 | ~24.5k+ | **Inria Non-Commercial Research** | **100% Free self-hosted** | Breakthrough real-time radiance field rendering algorithm delivering photorealistic 3D scene reconstruction and real-time GPU rasterization from multi-view images. |
 | **[Tencent Hunyuan3D-2](https://github.com/Tencent/Hunyuan3D-2)** <a href="https://github.com/Tencent/Hunyuan3D-2/stargazers"><img src="https://img.shields.io/github/stars/Tencent/Hunyuan3D-2?style=social&color=white" alt="Stars"/></a> 🚀 | ~15.5k+ | **Tencent Open-Source / Apache-2.0** | **100% Free self-hosted** | Next-generation high-resolution 3D foundation model supporting fast single-image-to-3D and text-to-3D generation with structured shape modeling and high-fidelity textures. |
@@ -99,7 +99,7 @@ Contributions are warmly encouraged! Help keep this directory current, accurate,
 2. **Create a descriptive branch**: `git checkout -b feature/add-new-tool` 🌿
 3. **Add your tool or library** under the appropriate SaaS or Open-Source section 📝
    - SaaS entries must include factual pricing and specific free tier/trial limits.
-   - Open-source entries must include license, links, description, and star badge.
+   - Open-source entries must include license, links, description, and Stars_Badge.
 4. **Commit your changes**: `git commit -m "feat: add [Tool Name]"` 💬
 5. **Push and open a Pull Request**: Submit your PR for review 🚀
 
