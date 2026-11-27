@@ -1,0 +1,206 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 420" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradients -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b0f19" />
+      <stop offset="50%" stop-color="#111827" />
+      <stop offset="100%" stop-color="#070a10" />
+    </linearGradient>
+
+    <linearGradient id="primaryTextGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="35%" stop-color="#818cf8" />
+      <stop offset="70%" stop-color="#c084fc" />
+      <stop offset="100%" stop-color="#f472b6" />
+    </linearGradient>
+
+    <linearGradient id="accentGlowGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.25" />
+      <stop offset="100%" stop-color="#8b5cf6" stop-opacity="0" />
+    </linearGradient>
+
+    <linearGradient id="pillGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#1e293b" stop-opacity="0.9" />
+      <stop offset="100%" stop-color="#334155" stop-opacity="0.7" />
+    </linearGradient>
+
+    <!-- Grid Pattern -->
+    <pattern id="isometricGrid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#334155" stroke-width="0.75" stroke-opacity="0.3" />
+      <circle cx="40" cy="40" r="1.5" fill="#38bdf8" fill-opacity="0.2" />
+    </pattern>
+
+    <!-- Glow Filter -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <style>
+    .bg { fill: url(#bgGrad); }
+    .grid { fill: url(#isometricGrid); }
+    
+    /* Dynamic pulsing and drifting animations */
+    @keyframes pulseOrb {
+      0%, 100% { transform: scale(1) translate(0px, 0px); opacity: 0.35; }
+      50% { transform: scale(1.18) translate(15px, -10px); opacity: 0.6; }
+    }
+    @keyframes pulseOrb2 {
+      0%, 100% { transform: scale(1) translate(0px, 0px); opacity: 0.3; }
+      50% { transform: scale(1.22) translate(-20px, 15px); opacity: 0.55; }
+    }
+    @keyframes rotateWireframe {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    @keyframes floatPill {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-5px); }
+    }
+    @keyframes dashStream {
+      0% { stroke-dashoffset: 400; }
+      100% { stroke-dashoffset: 0; }
+    }
+
+    .orb1 {
+      animation: pulseOrb 7s ease-in-out infinite;
+      transform-origin: 200px 180px;
+    }
+    .orb2 {
+      animation: pulseOrb2 9s ease-in-out infinite;
+      transform-origin: 1000px 240px;
+    }
+    .rotating-cube {
+      animation: rotateWireframe 28s linear infinite;
+      transform-origin: 1040px 130px;
+    }
+    .stream-line {
+      stroke-dasharray: 12, 12;
+      animation: dashStream 14s linear infinite;
+    }
+    .pill-group {
+      animation: floatPill 5s ease-in-out infinite;
+    }
+    
+    .title {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      font-weight: 900;
+      font-size: 44px;
+      letter-spacing: -0.8px;
+    }
+    .subtitle {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      font-weight: 500;
+      font-size: 19px;
+      fill: #cbd5e1;
+    }
+    .tagline {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      font-weight: 600;
+      font-size: 14px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      fill: #38bdf8;
+    }
+    .badge-text {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      font-weight: 600;
+      font-size: 13px;
+      fill: #f1f5f9;
+    }
+  </style>
+
+  <!-- Background Base -->
+  <rect width="100%" height="100%" class="bg" />
+  <rect width="100%" height="100%" class="grid" />
+
+  <!-- Dynamic Glowing Mesh Spheres / Orbs in Background -->
+  <g class="orb1">
+    <circle cx="200" cy="180" r="140" fill="url(#accentGlowGrad)" filter="url(#glow)" />
+    <circle cx="200" cy="180" r="70" fill="#38bdf8" fill-opacity="0.1" />
+  </g>
+  <g class="orb2">
+    <circle cx="1000" cy="240" r="160" fill="#8b5cf6" fill-opacity="0.15" filter="url(#glow)" />
+    <circle cx="1000" cy="240" r="80" fill="#ec4899" fill-opacity="0.1" />
+  </g>
+
+  <!-- Background Animated Data Stream Waves (Behind foreground text) -->
+  <path d="M -50 360 C 250 290, 450 410, 750 340 C 950 290, 1100 370, 1250 320" 
+        fill="none" stroke="#6366f1" stroke-width="2" stroke-opacity="0.4" class="stream-line" />
+  <path d="M -50 380 C 280 320, 500 430, 800 360 C 1000 310, 1150 390, 1250 340" 
+        fill="none" stroke="#06b6d4" stroke-width="1.5" stroke-opacity="0.3" class="stream-line" style="animation-duration: 20s;" />
+
+  <!-- Background Geometric Wireframe Cube (Decorating right side, behind badge cards) -->
+  <g class="rotating-cube" opacity="0.28" stroke="#38bdf8" stroke-width="1.8" fill="none">
+    <!-- Isometric Cube Wireframe -->
+    <polygon points="1040,70 1100,105 1100,175 1040,140" />
+    <polygon points="1040,70 980,105 980,175 1040,140" />
+    <polygon points="1040,140 1100,175 1040,210 980,175" />
+    <line x1="1040" y1="70" x2="1040" y2="140" stroke="#c084fc" />
+    <line x1="980" y1="105" x2="1100" y2="105" stroke="#818cf8" stroke-dasharray="4,4" />
+  </g>
+
+  <!-- FOREGROUND CONTENT: Guaranteed sharp contrast and front-layer placement -->
+  <!-- Category Tagline -->
+  <text x="80" y="85" class="tagline">✦ NEXT-GEN 3D FOUNDATION MODELS &amp; NEURAL ASSET WORKFLOWS ✦</text>
+
+  <!-- Main Title -->
+  <text x="80" y="145" class="title" fill="url(#primaryTextGrad)">
+    Generative 3D Modeling &amp; AI Asset Pipelines
+  </text>
+
+  <!-- Subtitle -->
+  <text x="80" y="195" class="subtitle">
+    State-of-the-Art Text/Image-to-3D • PBR Synthesis • Neural Rigging • Quad Retopology
+  </text>
+
+  <!-- Dynamic Floating Feature Pills -->
+  <g class="pill-group" transform="translate(80, 245)">
+    <!-- Pill 1: Text-to-3D & Img-to-3D -->
+    <g transform="translate(0, 0)">
+      <rect width="210" height="42" rx="21" fill="url(#pillGrad)" stroke="#38bdf8" stroke-width="1.2" stroke-opacity="0.6" />
+      <circle cx="21" cy="21" r="5" fill="#38bdf8" />
+      <text x="36" y="26" class="badge-text">Text &amp; Single-Image to 3D</text>
+    </g>
+
+    <!-- Pill 2: 4K PBR Texture Synthesis -->
+    <g transform="translate(225, 0)">
+      <rect width="225" height="42" rx="21" fill="url(#pillGrad)" stroke="#818cf8" stroke-width="1.2" stroke-opacity="0.6" />
+      <circle cx="21" cy="21" r="5" fill="#818cf8" />
+      <text x="36" y="26" class="badge-text">4K PBR Texture Painting</text>
+    </g>
+
+    <!-- Pill 3: Quad Retopology & UV -->
+    <g transform="translate(465, 0)">
+      <rect width="215" height="42" rx="21" fill="url(#pillGrad)" stroke="#c084fc" stroke-width="1.2" stroke-opacity="0.6" />
+      <circle cx="21" cy="21" r="5" fill="#c084fc" />
+      <text x="36" y="26" class="badge-text">Quad Mesh Retopology</text>
+    </g>
+
+    <!-- Pill 4: Skeletal Auto-Rigging -->
+    <g transform="translate(695, 0)">
+      <rect width="200" height="42" rx="21" fill="url(#pillGrad)" stroke="#f472b6" stroke-width="1.2" stroke-opacity="0.6" />
+      <circle cx="21" cy="21" r="5" fill="#f472b6" />
+      <text x="36" y="26" class="badge-text">Auto-Rigging &amp; Skinning</text>
+    </g>
+
+    <!-- Pill 5: Local & SaaS -->
+    <g transform="translate(910, 0)">
+      <rect width="170" height="42" rx="21" fill="url(#pillGrad)" stroke="#34d399" stroke-width="1.2" stroke-opacity="0.6" />
+      <circle cx="21" cy="21" r="5" fill="#34d399" />
+      <text x="36" y="26" class="badge-text">SaaS &amp; Local GPU</text>
+    </g>
+  </g>
+
+  <!-- Footer Stat Bar / Highlights -->
+  <g transform="translate(80, 340)">
+    <line x1="0" y1="0" x2="1040" y2="0" stroke="#334155" stroke-width="1" stroke-opacity="0.5" />
+    <text x="0" y="32" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" fill="#94a3b8">
+      🔥 <tspan fill="#f1f5f9" font-weight="600">TRELLIS</tspan> • <tspan fill="#f1f5f9" font-weight="600">Hunyuan3D-2</tspan> • <tspan fill="#f1f5f9" font-weight="600">Gaussian Splatting</tspan> • <tspan fill="#f1f5f9" font-weight="600">PyTorch3D</tspan> • <tspan fill="#f1f5f9" font-weight="600">TripoSR</tspan> • <tspan fill="#f1f5f9" font-weight="600">Meshy</tspan> • <tspan fill="#f1f5f9" font-weight="600">Luma AI</tspan>
+    </text>
+    <text x="1040" y="32" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="600" fill="#38bdf8">
+      Production-Ready Asset Pipelines ⚡
+    </text>
+  </g>
+</svg>
